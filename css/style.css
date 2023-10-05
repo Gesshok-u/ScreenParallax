@@ -1,0 +1,148 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    line-height: 1;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+}
+
+.wrapper {
+    min-height: 100%;
+    max-height: 500px;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+
+
+._container {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 50px 20px;
+}
+
+/* ------- */
+
+.parallax {
+    min-height: 100vh;
+}
+
+.parallax_body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+} 
+
+.parallax_body-container {
+    text-decoration: uppercase;
+    position: relative;
+    z-index: 2;
+    padding: 80px;
+}
+
+.parallax_body__label {
+    color: rgb(255, 208, 138);
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin: 0px 0px 30px 0px;
+    align-items: center;
+}
+
+.parallax_body__label::before {
+    content: "";
+    flex: 0 0 70px;
+    margin: 0px 30px 0px 0px ;
+    background-color: rgb(255, 208, 138);
+    height: 1px;
+}
+
+.parallax_body__title {
+    font-size: 88px;
+}
+
+.parallax_body-images {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 1;
+}
+
+.images-parallax {
+
+}
+
+.images-parallax__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.images-parallax__clouds, .images-parallax__mountaints, .images-parallax__human {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.images-parallax__clouds {
+    background: url("/img/clouds.jpg") top / cover no-repeat;
+    top: 0;
+}
+
+.images-parallax__mountaints {
+    background: url("/img/mountains.png") top / cover no-repeat;
+    top: 15%;
+    z-index: 2;
+}
+
+.images-parallax__human {
+    background: url("/img/human.png") top / cover no-repeat;
+    top: 45%;
+    z-index: 3;
+}
+
+@media (max-aspect-ratio: 3/2) {
+    .images-parallax__human {
+        background-position: 20% top;
+    }
+}
+
+.content {
+    background-color: rgb(0, 24, 7);
+    position: relative;
+    z-index: 20;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 225px;
+    transform: translate(0px, -99%);
+    background: linear-gradient(0deg, rgb(0, 24, 7) 8%, rgba(0, 24, 7, 0) 100%);
+}
